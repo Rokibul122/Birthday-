@@ -1,175 +1,131 @@
+<!-- index.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
   <meta name="theme-color" content="#05050b">
-
   <title>For Zainab ✦</title>
-
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@300;400;500&family=Playfair+Display:ital,wght@400;500;600;700&display=swap" rel="stylesheet">
-
   <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-  <div id="stars"></div>
+<div id="loader">
+  <div class="loader-ring"></div>
+  <span>creating a little surprise...</span>
+</div>
 
-  <div class="ambient ambient-one"></div>
-  <div class="ambient ambient-two"></div>
+<canvas id="space"></canvas>
 
-  <header class="top">
-    <span>✦ MADE WITH LITTLE DOTS ✦</span>
-  </header>
+<main>
 
-  <main>
+  <section class="hero">
 
-    <section class="hero">
+    <div class="eyebrow">✦ MADE WITH LITTLE DOTS ✦</div>
 
-      <div class="eyebrow">A LITTLE SOMETHING FOR YOU</div>
+    <h1>
+      Kuch cheezein<br>
+      <em>lafzon se nahi banti.</em>
+    </h1>
 
-      <h1>
-        Kuch cheezein<br>
-        <em>lafzon se nahi banti.</em>
-      </h1>
+    <p class="sub">
+      Isliye ye chhota sa surprise dots se banaya hai.
+    </p>
 
-      <p class="sub">
-        Isliye ek chhota sa surprise dots se banaya hai.
-      </p>
+    <div class="portrait-shell" id="portraitShell">
 
-      <div class="portrait-wrap" id="portraitWrap">
+      <canvas id="portrait"></canvas>
 
-        <canvas id="portrait"></canvas>
+      <div class="scanline"></div>
+      <div class="light-sweep"></div>
 
-        <div class="scan"></div>
-        <div class="portrait-glow"></div>
-
-        <button id="nameTag">
-          ✦ ZAINAB ✦
-        </button>
-
+      <div class="name-chip">
+        ✦ Z A I N A B ✦
       </div>
 
-      <div class="hint">
-        <span class="pulse-dot"></span>
-        Touch the portrait
-        <span class="arrow">↗</span>
+      <div class="touch-hint">
+        Touch the portrait ✦
       </div>
 
-    </section>
+    </div>
+
+    <button id="replay">
+      ↻ Replay the magic
+    </button>
+
+  </section>
 
 
-    <section class="messages">
+  <section class="messages">
 
-      <div class="section-label">
-        ✦ A FEW WORDS ✦
-      </div>
-
-      <article class="message-card reveal">
-        <span class="number">01</span>
-
-        <h2>Ek chhoti si dua 🤲</h2>
-
-        <p>
-          Allah tumhe hamesha khush rakhe, tumhari har mushkil ko
-          aasan kare, aur tumhari har achhi dua ko qubool farmaye.
-          Ameen. 🤍
-        </p>
-      </article>
+    <div class="section-label">
+      ✦ A FEW WORDS ✦
+    </div>
 
 
-      <article class="message-card reveal">
-        <span class="number">02</span>
+    <article class="card reveal">
 
-        <h2>Birthday wali baat 🎂</h2>
-
-        <p>
-          Aaj ka din special hai kyunki aaj Allah ne duniya ko tum
-          jaisi ek achhi rooh pyari thi. Bas cake ka ek piece mere
-          liye bhi bacha lena. 😌
-        </p>
-      </article>
-
-
-      <article class="message-card reveal">
-        <span class="number">03</span>
-
-        <h2>Thodi si hasi 😭</h2>
-
-        <p>
-          Waise birthday tumhara hai, lekin excitement meri zyada hai.
-          Yeh thoda unfair hai... lekin chalo, aaj complain nahi karunga. 😂
-        </p>
-      </article>
-
-
-      <article class="message-card reveal">
-        <span class="number">04</span>
-
-        <h2>Ek dil se baat 🤍</h2>
-
-        <p>
-          Kuch log zindagi mein bas baat karne ke liye nahi aate.
-          Unki presence hi ek achhi yaad ban jaati hai.
-          Tum unhi yaadon mein se ek ho.
-        </p>
-      </article>
-
-
-      <article class="message-card reveal">
-        <span class="number">05</span>
-
-        <h2>Allah tumhe hifazat mein rakhe 🌙</h2>
-
-        <p>
-          Allah tumhare dil ko sukoon de, tumhare raste aasaan kare,
-          tumhe buri nazar aur har pareshani se mehfooz rakhe,
-          aur tumhari zindagi ko khubsurat aur barkat se bhar de.
-          Ameen ya Rabb. 🤲
-        </p>
-      </article>
-
-    </section>
-
-
-    <section class="final-section reveal">
-
-      <div class="final-symbol">✦</div>
+      <span class="num">01</span>
 
       <h2>
-        Bas itna hi kehna tha...
+        Ek chhoti si dua 🤲
       </h2>
 
       <p>
-        Happy Birthday, Zainab.
+        Allah tumhe hamesha khush rakhe, tumhari har mushkil ko aasan kare,
+        aur tumhari har achhi dua ko qubool farmaye. Ameen. 🤍
       </p>
 
-      <div class="dua">
-        May Allah keep your heart peaceful,
-        your smile genuine,
-        and your life full of barakah.
-      </div>
-
-      <div class="final-stars">
-        ✦　·　✧　·　✦
-      </div>
-
-    </section>
-
-  </main>
+    </article>
 
 
-  <footer>
-    MADE WITH ✦ LITTLE DOTS
-  </footer>
+    <article class="card reveal">
+
+      <span class="num">02</span>
+
+      <h2>
+        Birthday wali baat 🎂
+      </h2>
+
+      <p>
+        Aaj ka din special hai kyunki aaj Allah ne duniya ko tum jaisi
+        ek achhi aur pyari insaan di thi. Bas cake ka ek piece mere liye
+        bhi bacha lena. 😅
+      </p>
+
+    </article>
 
 
-  <div id="touchFlash"></div>
+    <article class="card reveal">
 
-  <script src="script.js"></script>
+      <span class="num">03</span>
+
+      <h2>
+        Bas ek wish ✨
+      </h2>
+
+      <p>
+        Allah tumhari zindagi mein sukoon, barkat aur khubsurat lamhe
+        hamesha barqarar rakhe. Ameen. 🤍
+      </p>
+
+    </article>
+
+
+    <div class="final-note reveal">
+      <span>✦</span>
+      <p>Some wishes are better felt than explained.</p>
+      <span>✦</span>
+    </div>
+
+  </section>
+
+</main>
+
+<div id="toast"></div>
+
+<script src="script.js"></script>
 
 </body>
 </html>
