@@ -2,314 +2,172 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <meta name="theme-color" content="#05050b">
 
-  <title>For Zainab 🤍</title>
+  <title>For Zainab ✦</title>
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@300;400;500&family=Playfair+Display:ital,wght@400;500;600;700&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-  <!-- CINEMATIC CANVAS -->
-  <canvas id="fxCanvas"></canvas>
+  <div id="stars"></div>
 
-  <!-- AMBIENT LIGHTS -->
   <div class="ambient ambient-one"></div>
   <div class="ambient ambient-two"></div>
-  <div class="ambient ambient-three"></div>
 
+  <header class="top">
+    <span>✦ MADE WITH LITTLE DOTS ✦</span>
+  </header>
 
-  <!-- INTRO -->
-  <div id="intro">
+  <main>
 
-    <div class="intro-stars">✦　✧　✦</div>
-
-    <div id="introText">
-      Ek chhoti si surprise...
-    </div>
-
-    <div id="introName">
-      ZAINAB
-    </div>
-
-    <div class="intro-line"></div>
-
-    <button id="enterButton">
-      Tap to enter ✦
-    </button>
-
-  </div>
-
-
-  <!-- MAIN WEBSITE -->
-  <main id="website" class="hidden">
-
-
-    <!-- HERO -->
     <section class="hero">
 
-      <div class="eyebrow">
-        ✦ A LITTLE SOMETHING FOR YOU ✦
-      </div>
+      <div class="eyebrow">A LITTLE SOMETHING FOR YOU</div>
 
       <h1>
-        Happy Birthday
-        <span>Zainab</span>
+        Kuch cheezein<br>
+        <em>lafzon se nahi banti.</em>
       </h1>
 
-      <p>
-        Ek chhoti si jagah... sirf tumhare liye 🤍
+      <p class="sub">
+        Isliye ek chhota sa surprise dots se banaya hai.
       </p>
 
-      <div class="scroll-indicator">
-        <span></span>
-        Scroll slowly
-      </div>
+      <div class="portrait-wrap" id="portraitWrap">
 
-    </section>
+        <canvas id="portrait"></canvas>
 
+        <div class="scan"></div>
+        <div class="portrait-glow"></div>
 
-    <!-- PORTRAIT -->
-    <section class="portrait-section">
-
-      <div class="section-label">
-        ✦ MADE WITH LITTLE DOTS ✦
-      </div>
-
-      <h2>
-        Kuch cheezein
-        <em>lafzon se nahi banti.</em>
-      </h2>
-
-      <p class="muted">
-        Isliye ye chhota sa surprise dots se banaya hai.
-      </p>
-
-
-      <div
-        class="portrait-wrapper"
-        id="portraitWrapper"
-      >
-
-        <div class="portrait-glow glow-one"></div>
-        <div class="portrait-glow glow-two"></div>
-
-        <canvas id="portraitCanvas"></canvas>
-
-        <div class="scan-line"></div>
-
-        <div class="portrait-label">
+        <button id="nameTag">
           ✦ ZAINAB ✦
-        </div>
+        </button>
 
       </div>
 
-      <p class="touch-hint">
-        Touch the portrait ✦
-      </p>
+      <div class="hint">
+        <span class="pulse-dot"></span>
+        Touch the portrait
+        <span class="arrow">↗</span>
+      </div>
 
     </section>
 
 
-    <!-- MESSAGES -->
-    <section class="messages-section">
+    <section class="messages">
 
       <div class="section-label">
         ✦ A FEW WORDS ✦
       </div>
 
+      <article class="message-card reveal">
+        <span class="number">01</span>
 
-      <article class="message-card">
-
-        <span class="card-number">01</span>
-
-        <h3>Ek chhoti si dua 🤲</h3>
+        <h2>Ek chhoti si dua 🤲</h2>
 
         <p>
-          Allah tumhe hamesha khush rakhe,
-          tumhari har mushkil ko aasan kare,
-          aur tumhari har achhi dua ko qubool farmaye.
+          Allah tumhe hamesha khush rakhe, tumhari har mushkil ko
+          aasan kare, aur tumhari har achhi dua ko qubool farmaye.
           Ameen. 🤍
         </p>
-
       </article>
 
 
-      <article class="message-card">
+      <article class="message-card reveal">
+        <span class="number">02</span>
 
-        <span class="card-number">02</span>
-
-        <h3>Birthday wali baat 🎂</h3>
+        <h2>Birthday wali baat 🎂</h2>
 
         <p>
-          Aaj ka din special hai kyunki aaj
-          Allah ne duniya ko tum jaisi ek achhi
-          aur pyari insaan di thi.
-          Bas cake ka ek piece mere liye bhi bacha lena. 😂
+          Aaj ka din special hai kyunki aaj Allah ne duniya ko tum
+          jaisi ek achhi rooh pyari thi. Bas cake ka ek piece mere
+          liye bhi bacha lena. 😌
         </p>
-
       </article>
 
 
-      <article class="message-card">
+      <article class="message-card reveal">
+        <span class="number">03</span>
 
-        <span class="card-number">03</span>
-
-        <h3>Dil se ek baat 🤍</h3>
+        <h2>Thodi si hasi 😭</h2>
 
         <p>
-          Zindagi mein har waqt sab kuch perfect nahi hota,
-          lekin Allah jis raaste par rakhta hai,
-          usmein zaroor koi hikmat hoti hai.
-          Bas Allah par bharosa rakhna aur muskurate rehna.
+          Waise birthday tumhara hai, lekin excitement meri zyada hai.
+          Yeh thoda unfair hai... lekin chalo, aaj complain nahi karunga. 😂
         </p>
-
       </article>
 
 
-      <article class="message-card">
+      <article class="message-card reveal">
+        <span class="number">04</span>
 
-        <span class="card-number">04</span>
-
-        <h3>Thoda emotional 🥹</h3>
+        <h2>Ek dil se baat 🤍</h2>
 
         <p>
-          Kuch log zindagi mein bahut zyada waqt ke liye nahi,
-          lekin ek achhi yaad banne ke liye aate hain.
-          Tumhari muskurahat hamesha aise hi bani rahe,
-          ye dil se dua hai.
+          Kuch log zindagi mein bas baat karne ke liye nahi aate.
+          Unki presence hi ek achhi yaad ban jaati hai.
+          Tum unhi yaadon mein se ek ho.
         </p>
-
       </article>
 
 
-      <article class="message-card">
+      <article class="message-card reveal">
+        <span class="number">05</span>
 
-        <span class="card-number">05</span>
-
-        <h3>Allah tumhare saath rahe 🌙</h3>
-
-        <p>
-          Allah tumhare dil ko sukoon de,
-          tumhari zindagi mein barkat de,
-          tumhe nek aur behtareen raaston par chalaye,
-          aur tumhare liye har woh cheez likhe
-          jo tumhare haq mein behtar ho.
-          Ameen Ya Rabb. 🤲
-        </p>
-
-      </article>
-
-
-      <article class="message-card">
-
-        <span class="card-number">06</span>
-
-        <h3>Ek serious problem hai 😂</h3>
+        <h2>Allah tumhe hifazat mein rakhe 🌙</h2>
 
         <p>
-          Tumhe birthday wish karne ke liye
-          itna lamba message likh diya,
-          ab tumhe bhi kam se kam ek achha sa reply dena padega.
-          Ye rule abhi officially banaya gaya hai. 😂
+          Allah tumhare dil ko sukoon de, tumhare raste aasaan kare,
+          tumhe buri nazar aur har pareshani se mehfooz rakhe,
+          aur tumhari zindagi ko khubsurat aur barkat se bhar de.
+          Ameen ya Rabb. 🤲
         </p>
-
-      </article>
-
-
-      <!-- SECRET -->
-      <div class="secret-box">
-
-        <div class="secret-icon">✦</div>
-
-        <h3>
-          Ek chhoti si secret baat...
-        </h3>
-
-        <p>
-          Shayad iske andar kuch hai.
-        </p>
-
-        <button id="secretButton">
-          Tap to discover
-        </button>
-
-        <div
-          id="secretMessage"
-          class="secret-message"
-        >
-          Kabhi kabhi kisi ke liye dua karna hi
-          sabse khoobsurat gift hota hai.
-          Isliye dil se dua hai,
-          Allah tumhe duniya aur aakhirat dono mein
-          khushiyan ata kare. Ameen. 🤲🤍
-        </div>
-
-      </div>
-
-
-      <!-- FINAL MESSAGE -->
-      <article class="message-card final-card">
-
-        <span class="card-number">07</span>
-
-        <h3>Last mein bas itna 🤍</h3>
-
-        <p>
-          Happy Birthday, Zainab.
-          Allah tumhari zindagi ko khushiyon,
-          sukoon, barkat aur achhi yaadon se bhar de.
-          Jo tumhare haq mein behtar hai,
-          Allah wahi tumhe ata farmaye.
-          Ameen. 🤲🌙
-        </p>
-
       </article>
 
     </section>
 
 
-    <!-- FINAL SCENE -->
-    <section class="final-section">
+    <section class="final-section reveal">
 
-      <div class="final-stars">
-        ✦　✧　✦
-      </div>
-
-      <div class="final-small">
-        ONE LAST DUA
-      </div>
+      <div class="final-symbol">✦</div>
 
       <h2>
-        May Allah keep
-        your heart happy.
+        Bas itna hi kehna tha...
       </h2>
 
       <p>
-        Ameen. Ya Rabb. 🤲
+        Happy Birthday, Zainab.
       </p>
 
-      <div class="final-line"></div>
-
-      <div class="final-name">
-        Happy Birthday, Zainab 🤍
+      <div class="dua">
+        May Allah keep your heart peaceful,
+        your smile genuine,
+        and your life full of barakah.
       </div>
 
-      <div class="final-sign">
-        made with a little dua
+      <div class="final-stars">
+        ✦　·　✧　·　✦
       </div>
 
     </section>
 
-
   </main>
 
+
+  <footer>
+    MADE WITH ✦ LITTLE DOTS
+  </footer>
+
+
+  <div id="touchFlash"></div>
 
   <script src="script.js"></script>
 
