@@ -1,0 +1,370 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  min-height: 100vh;
+  font-family: Arial, sans-serif;
+
+  background:
+    radial-gradient(circle at top, #29365f 0%, #11162d 45%, #070a17 100%);
+
+  color: #f8f5ff;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  overflow-x: hidden;
+  padding: 25px 12px;
+}
+
+/* Background Stars */
+
+.stars::before,
+.stars::after {
+  content: "✦   ·   ✧   ·   ✦   ·   ✧   ·   ✦   ·   ·   ✧";
+
+  position: fixed;
+
+  width: 100%;
+  height: 100%;
+
+  top: 0;
+  left: 0;
+
+  color: rgba(255, 255, 255, 0.35);
+
+  font-size: 20px;
+
+  line-height: 70px;
+  word-spacing: 25px;
+
+  pointer-events: none;
+
+  animation: starsMove 10s linear infinite;
+}
+
+.stars::after {
+  animation-delay: -5s;
+  opacity: 0.25;
+}
+
+/* Main */
+
+.container {
+  width: 100%;
+  max-width: 480px;
+  position: relative;
+  z-index: 2;
+}
+
+/* Card */
+
+.card {
+  width: 100%;
+
+  padding: 35px 25px;
+
+  text-align: center;
+
+  border-radius: 30px;
+
+  background: rgba(255, 255, 255, 0.08);
+
+  border: 1px solid rgba(255, 255, 255, 0.15);
+
+  backdrop-filter: blur(18px);
+
+  box-shadow:
+    0 25px 80px rgba(0, 0, 0, 0.4),
+    inset 0 0 30px rgba(255, 255, 255, 0.03);
+
+  animation: cardAppear 1.2s ease;
+}
+
+/* Moon */
+
+.moon {
+  font-size: 55px;
+
+  margin-bottom: 12px;
+
+  animation: moonFloat 3s ease-in-out infinite;
+}
+
+/* Bismillah */
+
+.bismillah {
+  font-family: Georgia, serif;
+
+  font-size: 14px;
+
+  letter-spacing: 1px;
+
+  opacity: 0.75;
+
+  margin-bottom: 15px;
+}
+
+/* Heading */
+
+h1 {
+  font-family: Georgia, serif;
+
+  font-size: 39px;
+
+  margin-bottom: 7px;
+
+  background: linear-gradient(
+    90deg,
+    #fff,
+    #e8d7ff,
+    #fff
+  );
+
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+h2 {
+  font-family: Georgia, serif;
+
+  font-size: 27px;
+
+  color: #f2d8ff;
+
+  margin-bottom: 15px;
+}
+
+.divider {
+  color: #e9ceff;
+
+  letter-spacing: 8px;
+
+  margin: 12px 0 22px;
+}
+
+/* Paragraph */
+
+p {
+  font-size: 16px;
+
+  line-height: 1.8;
+
+  margin-bottom: 17px;
+
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.intro {
+  font-size: 16px;
+}
+
+/* Button */
+
+button {
+  border: none;
+
+  padding: 14px 24px;
+
+  border-radius: 50px;
+
+  font-size: 15px;
+
+  font-weight: bold;
+
+  color: #171124;
+
+  background: linear-gradient(
+    135deg,
+    #ffffff,
+    #ead7ff
+  );
+
+  cursor: pointer;
+
+  box-shadow: 0 10px 30px rgba(230, 210, 255, 0.18);
+
+  transition: 0.3s;
+}
+
+button:hover {
+  transform: translateY(-3px);
+
+  box-shadow: 0 15px 35px rgba(230, 210, 255, 0.3);
+}
+
+button:active {
+  transform: scale(0.96);
+}
+
+/* Message */
+
+.message {
+  margin-top: 25px;
+
+  padding: 22px 18px;
+
+  border-radius: 22px;
+
+  background: rgba(255, 255, 255, 0.06);
+
+  border: 1px solid rgba(255, 255, 255, 0.1);
+
+  animation: messageAppear 1s ease;
+}
+
+.hidden {
+  display: none;
+}
+
+/* Dua Box */
+
+.dua {
+  margin: 25px 0;
+
+  padding: 20px 15px;
+
+  border-radius: 20px;
+
+  background: rgba(255, 255, 255, 0.08);
+
+  border-left: 3px solid #e8d5ff;
+
+  border-right: 3px solid #e8d5ff;
+}
+
+.dua p {
+  margin-bottom: 10px;
+}
+
+/* Ending */
+
+.ending {
+  font-family: Georgia, serif;
+
+  font-size: 17px;
+
+  color: #f1ddff;
+}
+
+/* Footer */
+
+.footer {
+  margin-top: 25px;
+
+  font-size: 12px;
+
+  opacity: 0.55;
+
+  margin-bottom: 0;
+}
+
+/* Floating Hearts */
+
+.floating {
+  position: fixed;
+
+  bottom: -30px;
+
+  font-size: 20px;
+
+  pointer-events: none;
+
+  z-index: 10;
+
+  animation: floatUp 5s linear forwards;
+}
+
+/* Animations */
+
+@keyframes cardAppear {
+
+  from {
+    opacity: 0;
+    transform: translateY(35px) scale(0.96);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+
+}
+
+@keyframes messageAppear {
+
+  from {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+}
+
+@keyframes moonFloat {
+
+  0%, 100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-8px);
+  }
+
+}
+
+@keyframes starsMove {
+
+  from {
+    transform: translateY(0);
+  }
+
+  to {
+    transform: translateY(-70px);
+  }
+
+}
+
+@keyframes floatUp {
+
+  from {
+    transform: translateY(0) rotate(0deg);
+    opacity: 0.8;
+  }
+
+  to {
+    transform: translateY(-110vh) rotate(360deg);
+    opacity: 0;
+  }
+
+}
+
+/* Mobile */
+
+@media (max-width: 420px) {
+
+  .card {
+    padding: 30px 19px;
+  }
+
+  h1 {
+    font-size: 33px;
+  }
+
+  h2 {
+    font-size: 24px;
+  }
+
+  p {
+    font-size: 15px;
+  }
+
+    }
