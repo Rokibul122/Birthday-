@@ -1,1057 +1,526 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!DOCTYPE html>  <html lang="en">  
+<head>  
+  <meta charset="UTF-8">  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">    <title>For Zainab 🤍</title>  <meta
+name="description"
+content="A little birthday surprise made specially for Zainab."
 
-  <title>For Zainab 🤍</title>
+> 
 
-  <meta
-    name="description"
-    content="A little birthday surprise made specially for Zainab."
-  >
+  <link rel="stylesheet" href="style.css">  
+</head>  <body>    <!-- LOADING SCREEN -->    <div id="loader">  <div class="loader-moon">🌙</div>  
 
-  <link rel="stylesheet" href="style.css">
+<h3>Ek chhota sa surprise...</h3>  
 
-  <style>
-    /* Small additions for music + controls */
+<p>  
+  Thoda sabr karo, Zainab 😌  
+</p>  
 
-    #musicControl {
-      position: fixed;
-      right: 18px;
-      bottom: 18px;
-      z-index: 9999;
+<div class="loading">  
+  <span></span>  
+</div>
 
-      width: 48px;
-      height: 48px;
+  </div>    <!-- BACKGROUND -->  <canvas id="stars"></canvas>
 
-      border: 1px solid rgba(255,255,255,.18);
-      border-radius: 50%;
+  <div class="glow glow-one"></div>  
+  <div class="glow glow-two"></div>    <main>  <!-- HERO -->  
 
-      background: rgba(20,20,30,.85);
-      color: white;
+<section class="hero">  
 
-      backdrop-filter: blur(10px);
+  <div class="moon-area">  
 
-      cursor: pointer;
+    <div class="moon-ring"></div>  
 
-      font-size: 20px;
+    <div class="moon">  
+      🌙  
+    </div>  
 
-      box-shadow: 0 8px 30px rgba(0,0,0,.3);
+    <span class="orbit-star star-one">✦</span>  
+    <span class="orbit-star star-two">✧</span>  
 
-      transition: .25s;
-    }
+  </div>  
 
-    #musicControl:hover {
-      transform: scale(1.08);
-    }
 
-    #toast {
-      position: fixed;
-      left: 50%;
-      bottom: 80px;
+  <div class="bismillah">  
+    Bismillahir Rahmanir Rahim  
+  </div>  
 
-      transform: translateX(-50%) translateY(20px);
 
-      background: rgba(20,20,30,.92);
-      color: white;
+  <p class="small-title">  
+    A little surprise made with good wishes  
+  </p>  
 
-      padding: 12px 18px;
 
-      border-radius: 14px;
+  <h1>  
+    Happy Birthday  
+    <span>Zainab</span>  
+    🤍  
+  </h1>  
 
-      font-size: 14px;
 
-      opacity: 0;
-      pointer-events: none;
+  <p class="hero-text">  
+    Aaj ka din thoda sa extra special hai...  
+    kyunki aaj tumhara birthday hai. 😌  
+  </p>  
 
-      transition: .3s;
 
-      z-index: 10000;
+  <button id="openBtn" class="main-button">  
 
-      backdrop-filter: blur(12px);
-    }
+    <span>  
+      Open Your Surprise  
+    </span>  
 
-    #toast.show {
-      opacity: 1;
-      transform: translateX(-50%) translateY(0);
-    }
+    <b>✦</b>  
 
-    .music-note {
-      position: fixed;
-      pointer-events: none;
-      z-index: 9998;
+  </button>  
 
-      font-size: 18px;
 
-      animation: musicFloat 3s ease-out forwards;
-    }
+  <div class="scroll-hint">  
+    Scroll karo... kahani abhi baaki hai ↓  
+  </div>  
 
-    @keyframes musicFloat {
-      0% {
-        opacity: 0;
-        transform: translateY(20px) scale(.7);
-      }
+</section>  
 
-      20% {
-        opacity: 1;
-      }
 
-      100% {
-        opacity: 0;
-        transform: translateY(-100px) scale(1.2);
-      }
-    }
 
-    .celebrate-heart {
-      position: fixed;
-      pointer-events: none;
-      z-index: 9998;
+<!-- SECTION 01 -->  
 
-      font-size: 22px;
+<section class="section" id="wish">  
 
-      animation: heartFloat 3s ease-out forwards;
-    }
+  <div class="section-number">  
+    01 · PEHLI BAAT  
+  </div>  
 
-    @keyframes heartFloat {
-      0% {
-        opacity: 0;
-        transform: translateY(0) scale(.5);
-      }
 
-      15% {
-        opacity: 1;
-      }
+  <h2>  
+    Ek simple si wish,  
+    <span>lekin dil se.</span>  
+  </h2>  
 
-      100% {
-        opacity: 0;
-        transform: translateY(-180px) rotate(25deg) scale(1.3);
-      }
-    }
-  </style>
-</head>
 
+  <div class="glass-card">  
 
-<body>
+    <div class="card-light"></div>  
 
-  <!-- =========================================
-       BACKGROUND MUSIC
-       ========================================= -->
+    <p>  
 
-  <audio id="bgMusic" loop preload="auto">
-    <source src="birthday-song.mp3" type="audio/mpeg">
-  </audio>
+      Aaj tumhari zindagi ka ek aur khoobsurat  
+      saal shuru hua.  
 
+      Sirf “Happy Birthday” bol kar bhaag jaana  
+      thoda unfair hota. 😂  
 
-  <!-- MUSIC BUTTON -->
+      Isliye socha ek chhoti si digital duniya  
+      bana di jaye—  
 
-  <button
-    id="musicControl"
-    aria-label="Music control"
-    title="Music"
-  >
-    🔇
-  </button>
+      thodi si masti,  
+      thodi si feelings,  
 
+      aur sabse zyada duayein. 🤍  
 
-  <!-- LOADING SCREEN -->
+    </p>  
 
-  <div id="loader">
+  </div>  
 
-    <div class="loader-moon">🌙</div>
 
-    <h3>Ek chhota sa surprise...</h3>
+  <button id="duaBtn" class="gold-button">  
 
-    <p>
-      Thoda sabr karo, Zainab 😌
-    </p>
+    Dil se ek dua 🤲  
 
-    <div class="loading">
-      <span></span>
-    </div>
+  </button>  
 
-  </div>
 
+  <div id="duaBox" class="dua-box">  
 
-  <!-- BACKGROUND -->
+    <div class="dua-icon">  
+      🤲  
+    </div>  
 
-  <canvas id="stars"></canvas>
+    <p>  
 
-  <div class="glow glow-one"></div>
-  <div class="glow glow-two"></div>
+      Allah tumhari zindagi mein sukoon,  
+      barkat aur halal khushiyan ata farmaaye.  
 
+      Tumhare ilm mein izafa kare,  
+      tumhari mushkilein aasaan kare,  
 
-  <main>
+      tumhare ghar walon ko khush aur mehfooz rakhe,  
 
+      aur tumhari har jaiz dua ko tumhare haq mein  
+      behtareen waqt par qubool farmaaye.  
 
-    <!-- =========================================
-         HERO
-         ========================================= -->
+    </p>  
 
-    <section class="hero">
+    <strong>  
+      Ameen Ya Rabbal Aalameen. 🤍  
+    </strong>  
 
-      <div class="moon-area">
+  </div>  
 
-        <div class="moon-ring"></div>
+</section>  
 
-        <div class="moon">
-          🌙
-        </div>
 
-        <span class="orbit-star star-one">✦</span>
-        <span class="orbit-star star-two">✧</span>
 
-      </div>
+<!-- SECTION 02 -->  
 
+<section class="section" id="fun">  
 
-      <div class="bismillah">
-        Bismillahir Rahmanir Rahim
-      </div>
+  <div class="section-number">  
+    02 · BIRTHDAY SCIENCE 😂  
+  </div>  
 
 
-      <p class="small-title">
-        A little surprise made with good wishes
-      </p>
+  <h2>  
+    Aaj ke  
+    <span>important rules.</span>  
+  </h2>  
 
 
-      <h1>
-        Happy Birthday
-        <span>Zainab</span>
-        🤍
-      </h1>
+  <div class="cards">  
 
 
-      <p class="hero-text">
-        Aaj ka din thoda sa extra special hai...
-        kyunki aaj tumhara birthday hai. 😌
-      </p>
+    <div class="fun-card large">  
 
+      <div class="emoji">  
+        🎂  
+      </div>  
 
-      <!--
-        MUSIC STARTS WHEN THIS BUTTON IS PRESSED
-      -->
+      <h3>  
+        Rule #01  
+      </h3>  
 
-      <button id="openBtn" class="main-button">
+      <p>  
 
-        <span>
-          Open Your Surprise
-        </span>
+        Aaj calories count karna  
+        officially suspended hai.  
 
-        <b>✦</b>
+        Government notification aa chuki hai. 😂  
 
-      </button>
+      </p>  
 
+    </div>  
 
-      <div class="scroll-hint">
-        Scroll karo... kahani abhi baaki hai ↓
-      </div>
 
-    </section>
+    <div class="fun-card">  
 
+      <div class="emoji">  
+        😌  
+      </div>  
 
+      <h3>  
+        Rule #02  
+      </h3>  
 
-    <!-- =========================================
-         SECTION 01
-         ========================================= -->
+      <p>  
+        “Main busy hoon” excuse  
+        aaj half-day leave par hai.  
+      </p>  
 
-    <section class="section" id="wish">
+    </div>  
 
-      <div class="section-number">
-        01 · PEHLI BAAT
-      </div>
 
+    <div class="fun-card">  
 
-      <h2>
-        Ek simple si wish,
-        <span>lekin dil se.</span>
-      </h2>
+      <div class="emoji">  
+        🤲  
+      </div>  
 
+      <h3>  
+        Rule #03  
+      </h3>  
 
-      <div class="glass-card">
+      <p>  
+        Dua zyada.  
+        Tension kam.  
+        Baaki Allah par.  
+      </p>  
 
-        <div class="card-light"></div>
+    </div>  
 
-        <p>
 
-          Aaj tumhari zindagi ka ek aur khoobsurat
-          saal shuru hua.
+    <div class="fun-card wide">  
 
-          Sirf “Happy Birthday” bol kar bhaag jaana
-          thoda unfair hota. 😂
+      <div class="emoji">  
+        ✨  
+      </div>  
 
-          Isliye socha ek chhoti si digital duniya
-          bana di jaye—
+      <h3>  
+        Rule #04  
+      </h3>  
 
-          thodi si masti,
-          thodi si feelings,
+      <p>  
+        Aaj smile karna compulsory hai.  
 
-          aur sabse zyada duayein. 🤍
+        Complaint department kal khulega. 😂  
+      </p>  
 
-        </p>
+    </div>  
 
-      </div>
 
+  </div>  
 
-      <button id="duaBtn" class="gold-button">
+</section>  
 
-        Dil se ek dua 🤲
 
-      </button>
 
+<!-- LETTER -->  
 
-      <div id="duaBox" class="dua-box">
+<section class="section" id="letter">  
 
-        <div class="dua-icon">
-          🤲
-        </div>
+  <div class="section-number">  
+    03 · EK DIL KI BAAT  
+  </div>  
 
-        <p>
 
-          Allah tumhari zindagi mein sukoon,
-          barkat aur halal khushiyan ata farmaaye.
+  <div class="letter">  
 
-          Tumhare ilm mein izafa kare,
-          tumhari mushkilein aasaan kare,
+    <div class="letter-glow"></div>  
 
-          tumhare ghar walon ko khush aur mehfooz rakhe,
 
-          aur tumhari har jaiz dua ko tumhare haq mein
-          behtareen waqt par qubool farmaaye.
+    <div class="stamp">  
+      FOR<br>  
+      YOU  
+    </div>  
 
-        </p>
 
-        <strong>
-          Ameen Ya Rabbal Aalameen. 🤍
-        </strong>
+    <div class="letter-icon">  
+      💌  
+    </div>  
 
-      </div>
 
-    </section>
+    <h2>  
+      Zainab,  
+    </h2>  
 
 
+    <p>  
 
-    <!-- =========================================
-         SECTION 02
-         ========================================= -->
+      Kabhi kabhi kuch log zindagi mein  
+      bina kisi announcement ke aa jaate hain,  
 
-    <section class="section" id="fun">
+      lekin dheere dheere unki presence  
+      important lagne lagti hai.  
 
-      <div class="section-number">
-        02 · BIRTHDAY SCIENCE 😂
-      </div>
+    </p>  
 
 
-      <h2>
-        Aaj ke
-        <span>important rules.</span>
-      </h2>
+    <p>  
 
+      Tum unhi achhe logon mein se ho  
+      jinke liye dil se achha sochne ka  
+      mann karta hai.  
 
-      <div class="cards">
+    </p>  
 
 
-        <div class="fun-card large">
+    <div class="quote">  
 
-          <div class="emoji">
-            🎂
-          </div>
+      <span>  
+        “  
+      </span>  
 
-          <h3>
-            Rule #01
-          </h3>
+      <p>  
 
-          <p>
+        Jab dil pareshaan ho,  
+        Allah sukoon de.  
 
-            Aaj calories count karna
-            officially suspended hai.
+        Jab raasta mushkil ho,  
+        Allah aasaan kare.  
 
-            Government notification aa chuki hai. 😂
+        Aur jab tum kisi achhi cheez ki dua karo,  
 
-          </p>
+        Allah tumhe usse bhi behtar ata kare.  
 
-        </div>
+      </p>  
 
+    </div>  
 
-        <div class="fun-card">
 
-          <div class="emoji">
-            😌
-          </div>
+    <p>  
 
-          <h3>
-            Rule #02
-          </h3>
+      Allah tumhare imaan,  
+      sehat,  
+      ilm,  
+      waqt aur rizq mein barkat de.  
 
-          <p>
-            “Main busy hoon” excuse
-            aaj half-day leave par hai.
-          </p>
+      Tumhe achhe logon ki sohbat de,  
+      buri cheezon se mehfooz rakhe,  
 
-        </div>
+      aur tumhare future ko tumhari  
+      expectations se bhi zyada khoobsurat bana de.  
 
+      Ameen. 🤲  
 
-        <div class="fun-card">
+    </p>  
 
-          <div class="emoji">
-            🤲
-          </div>
 
-          <h3>
-            Rule #03
-          </h3>
+    <p class="funny">  
 
-          <p>
-            Dua zyada.
-            Tension kam.
-            Baaki Allah par.
-          </p>
+      Aur haan...  
 
-        </div>
+      itni serious duaon ke baad ek zaroori  
+      announcement:  
 
+      <b>  
+        aaj zyada smile karna mandatory hai.  
+      </b>  
 
-        <div class="fun-card wide">
+      😌😂  
 
-          <div class="emoji">
-            ✨
-          </div>
+    </p>  
 
-          <h3>
-            Rule #04
-          </h3>
 
-          <p>
-            Aaj smile karna compulsory hai.
+    <div class="signature">  
 
-            Complaint department kal khulega. 😂
-          </p>
+      With sincere duas & good wishes,  
 
-        </div>
+      <br>  
 
+      <b>  
+        Someone who genuinely wishes you well 🤍  
+      </b>  
 
-      </div>
+    </div>  
 
-    </section>
+  </div>  
 
+</section>  
 
 
-    <!-- =========================================
-         LETTER
-         ========================================= -->
 
-    <section class="section" id="letter">
+<!-- SECTION 04 -->  
 
-      <div class="section-number">
-        03 · EK DIL KI BAAT
-      </div>
+<section class="section">  
 
+  <div class="section-number">  
+    04 · EK CHHOTI REMINDER  
+  </div>  
 
-      <div class="letter">
 
-        <div class="letter-glow"></div>
+  <h2>  
+    Life ka ek  
+    <span>secret. 🤫</span>  
+  </h2>  
 
 
-        <div class="stamp">
-          FOR<br>
-          YOU
-        </div>
+  <div class="secret-card">  
 
 
-        <div class="letter-icon">
-          💌
-        </div>
+    <div class="secret-row">  
 
+      <div class="number">  
+        01  
+      </div>  
 
-        <h2>
-          Zainab,
-        </h2>
+      <p>  
+        Har cheez ka answer turant milna zaroori nahi.  
+      </p>  
 
+    </div>  
 
-        <p>
 
-          Kabhi kabhi kuch log zindagi mein
-          bina kisi announcement ke aa jaate hain,
+    <div class="line"></div>  
 
-          lekin dheere dheere unki presence
-          important lagne lagti hai.
 
-        </p>
+    <div class="secret-row">  
 
+      <div class="number">  
+        02  
+      </div>  
 
-        <p>
+      <p>  
+        Kabhi kabhi “not yet” bhi Allah ki taraf se  
+        protection hoti hai.  
+      </p>  
 
-          Tum unhi achhe logon mein se ho
-          jinke liye dil se achha sochne ka
-          mann karta hai.
+    </div>  
 
-        </p>
 
+    <div class="line"></div>  
 
-        <div class="quote">
 
-          <span>
-            “
-          </span>
+    <div class="secret-row">  
 
-          <p>
+      <div class="number">  
+        03  
+      </div>  
 
-            Jab dil pareshaan ho,
-            Allah sukoon de.
+      <p>  
+        Jo tumhare haq mein behtar hoga,  
+        Allah uska raasta zaroor khol sakta hai.  
+      </p>  
 
-            Jab raasta mushkil ho,
-            Allah aasaan kare.
+    </div>  
 
-            Aur jab tum kisi achhi cheez ki dua karo,
 
-            Allah tumhe usse bhi behtar ata kare.
+  </div>  
 
-          </p>
+</section>  
 
-        </div>
 
 
-        <p>
+<!-- FINAL -->  
 
-          Allah tumhare imaan,
-          sehat,
-          ilm,
-          waqt aur rizq mein barkat de.
+<section class="final section">  
 
-          Tumhe achhe logon ki sohbat de,
-          buri cheezon se mehfooz rakhe,
+  <div class="final-stars">  
+    ✦　✧　✦  
+  </div>  
 
-          aur tumhare future ko tumhari
-          expectations se bhi zyada khoobsurat bana de.
 
-          Ameen. 🤲
+  <div class="final-moon">  
+    🌙  
+  </div>  
 
-        </p>
 
+  <h2>  
+    One Last Dua...  
+  </h2>  
 
-        <p class="funny">
 
-          Aur haan...
+  <p>  
 
-          itni serious duaon ke baad ek zaroori
-          announcement:
+    Allah tumhare aaj ko khoobsurat,  
 
-          <b>
-            aaj zyada smile karna mandatory hai.
-          </b>
+    kal ko behtar,  
 
-          😌😂
+    aur tumhari poori zindagi ko  
 
-        </p>
+    sukoon,  
+    hidayat,  
+    sehat,  
+    barkat  
 
+    aur khoobsurat yaadon se bhar de.  
 
-        <div class="signature">
+  </p>  
 
-          With sincere duas & good wishes,
 
-          <br>
+  <div class="ameen">  
+    Ameen. 🤲  
+  </div>  
 
-          <b>
-            Someone who genuinely wishes you well 🤍
-          </b>
 
-        </div>
+  <button id="celebrateBtn" class="main-button">  
 
-      </div>
+    Make A Little Magic  
 
-    </section>
+    <b>  
+      ✦  
+    </b>  
 
+  </button>  
 
 
-    <!-- =========================================
-         SECTION 04
-         ========================================= -->
+  <footer>  
 
-    <section class="section">
+    Made with duas,  
+    good wishes &  
+    a tiny bit of drama. 🌙🤍  
 
-      <div class="section-number">
-        04 · EK CHHOTI REMINDER
-      </div>
+  </footer>  
 
+</section>
 
-      <h2>
-        Life ka ek
-        <span>secret. 🤫</span>
-      </h2>
-
-
-      <div class="secret-card">
-
-
-        <div class="secret-row">
-
-          <div class="number">
-            01
-          </div>
-
-          <p>
-            Har cheez ka answer turant milna zaroori nahi.
-          </p>
-
-        </div>
-
-
-        <div class="line"></div>
-
-
-        <div class="secret-row">
-
-          <div class="number">
-            02
-          </div>
-
-          <p>
-            Kabhi kabhi “not yet” bhi Allah ki taraf se
-            protection hoti hai.
-          </p>
-
-        </div>
-
-
-        <div class="line"></div>
-
-
-        <div class="secret-row">
-
-          <div class="number">
-            03
-          </div>
-
-          <p>
-            Jo tumhare haq mein behtar hoga,
-            Allah uska raasta zaroor khol sakta hai.
-          </p>
-
-        </div>
-
-
-      </div>
-
-    </section>
-
-
-
-    <!-- =========================================
-         FINAL
-         ========================================= -->
-
-    <section class="final section">
-
-      <div class="final-stars">
-        ✦　✧　✦
-      </div>
-
-
-      <div class="final-moon">
-        🌙
-      </div>
-
-
-      <h2>
-        One Last Dua...
-      </h2>
-
-
-      <p>
-
-        Allah tumhare aaj ko khoobsurat,
-
-        kal ko behtar,
-
-        aur tumhari poori zindagi ko
-
-        sukoon,
-        hidayat,
-        sehat,
-        barkat
-
-        aur khoobsurat yaadon se bhar de.
-
-      </p>
-
-
-      <div class="ameen">
-        Ameen. 🤲
-      </div>
-
-
-      <!-- MAGIC BUTTON -->
-
-      <button id="celebrateBtn" class="main-button">
-
-        Make A Little Magic
-
-        <b>
-          ✦
-        </b>
-
-      </button>
-
-
-      <footer>
-
-        Made with duas,
-        good wishes &
-        a tiny bit of drama. 🌙🤍
-
-      </footer>
-
-    </section>
-
-
-  </main>
-
-
-  <!-- TOAST -->
-
-  <div id="toast"></div>
-
-
-
-  <!-- =========================================
-       JAVASCRIPT
-       ========================================= -->
-
-  <script>
-
-    /* =========================================
-       ELEMENTS
-       ========================================= */
-
-    const music = document.getElementById("bgMusic");
-    const musicControl = document.getElementById("musicControl");
-    const openBtn = document.getElementById("openBtn");
-    const duaBtn = document.getElementById("duaBtn");
-    const duaBox = document.getElementById("duaBox");
-    const celebrateBtn = document.getElementById("celebrateBtn");
-    const toast = document.getElementById("toast");
-    const loader = document.getElementById("loader");
-
-
-    let musicPlaying = false;
-
-
-    /* =========================================
-       LOADING SCREEN
-       ========================================= */
-
-    window.addEventListener("load", () => {
-
-      setTimeout(() => {
-
-        if(loader){
-          loader.style.opacity = "0";
-          loader.style.pointerEvents = "none";
-
-          setTimeout(() => {
-            loader.style.display = "none";
-          }, 700);
-        }
-
-      }, 1500);
-
-    });
-
-
-    /* =========================================
-       TOAST
-       ========================================= */
-
-    function showToast(message){
-
-      toast.textContent = message;
-
-      toast.classList.add("show");
-
-      setTimeout(() => {
-        toast.classList.remove("show");
-      }, 2200);
-
-    }
-
-
-    /* =========================================
-       START MUSIC
-       ========================================= */
-
-    async function startMusic(){
-
-      try {
-
-        music.volume = 0.45;
-
-        await music.play();
-
-        musicPlaying = true;
-
-        musicControl.textContent = "🔊";
-
-        showToast("Birthday music started 🎵🤍");
-
-        createMusicNotes();
-
-      } catch(error) {
-
-        console.log("Music could not start:", error);
-
-        showToast("Tap the music button 🎵");
-
-      }
-
-    }
-
-
-    /* =========================================
-       MUSIC CONTROL
-       ========================================= */
-
-    musicControl.addEventListener("click", async () => {
-
-      if(music.paused){
-
-        await startMusic();
-
-      } else {
-
-        music.pause();
-
-        musicPlaying = false;
-
-        musicControl.textContent = "🔇";
-
-        showToast("Music paused");
-
-      }
-
-    });
-
-
-    /* =========================================
-       OPEN SURPRISE
-       ========================================= */
-
-    openBtn.addEventListener("click", async () => {
-
-      /*
-        IMPORTANT:
-
-        Browser autoplay restrictions mean
-        music should start after a user click.
-
-        This button is that user interaction.
-      */
-
-      await startMusic();
-
-
-      /*
-        Scroll to first section
-      */
-
-      setTimeout(() => {
-
-        document
-          .getElementById("wish")
-          .scrollIntoView({
-            behavior: "smooth"
-          });
-
-      }, 300);
-
-
-      openBtn.innerHTML = `
-        <span>Surprise Opened 🤍</span>
-        <b>✓</b>
-      `;
-
-    });
-
-
-    /* =========================================
-       DUA BUTTON
-       ========================================= */
-
-    duaBtn.addEventListener("click", () => {
-
-      if(
-        duaBox.style.display === "block"
-      ){
-
-        duaBox.style.display = "none";
-
-        duaBtn.textContent =
-          "Dil se ek dua 🤲";
-
-      } else {
-
-        duaBox.style.display = "block";
-
-        duaBtn.textContent =
-          "Ameen 🤲🤍";
-
-        duaBox.scrollIntoView({
-          behavior: "smooth",
-          block: "center"
-        });
-
-      }
-
-    });
-
-
-    /* =========================================
-       MAGIC / CELEBRATION
-       ========================================= */
-
-    celebrateBtn.addEventListener("click", () => {
-
-      /*
-        Make sure music is playing
-      */
-
-      if(music.paused){
-        startMusic();
-      }
-
-
-      /*
-        Create hearts
-      */
-
-      for(let i = 0; i < 25; i++){
-
-        setTimeout(() => {
-
-          createHeart();
-
-        }, i * 100);
-
-      }
-
-
-      showToast(
-        "Ameen 🤲 Happy Birthday Zainab 🤍"
-      );
-
-    });
-
-
-    /* =========================================
-       FLOATING MUSIC NOTES
-       ========================================= */
-
-    function createMusicNotes(){
-
-      const notes = ["♪","♫","♩","🎵"];
-
-      for(let i = 0; i < 8; i++){
-
-        setTimeout(() => {
-
-          const note =
-            document.createElement("div");
-
-          note.className = "music-note";
-
-          note.textContent =
-            notes[
-              Math.floor(
-                Math.random() * notes.length
-              )
-            ];
-
-          note.style.left =
-            Math.random() * 90 + "%";
-
-          note.style.bottom =
-            Math.random() * 20 + 10 + "px";
-
-          document.body.appendChild(note);
-
-
-          setTimeout(() => {
-            note.remove();
-          }, 3000);
-
-        }, i * 350);
-
-      }
-
-    }
-
-
-    /* =========================================
-       FLOATING HEART
-       ========================================= */
-
-    function createHeart(){
-
-      const heart =
-        document.createElement("div");
-
-      heart.className =
-        "celebrate-heart";
-
-      const hearts = [
-        "🤍",
-        "❤️",
-        "🌸",
-        "✨",
-        "🥹"
-      ];
-
-      heart.textContent =
-        hearts[
-          Math.floor(
-            Math.random() * hearts.length
-          )
-        ];
-
-
-      heart.style.left =
-        Math.random() * 95 + "%";
-
-      heart.style.bottom =
-        "30px";
-
-
-      document.body.appendChild(heart);
-
-
-      setTimeout(() => {
-        heart.remove();
-      }, 3000);
-
-    }
-
-
-    /* =========================================
-       SMALL KEYBOARD SHORTCUT
-       ========================================= */
-
-    document.addEventListener(
-      "keydown",
-      (event) => {
-
-        /*
-          Press M to toggle music
-        */
-
-        if(
-          event.key.toLowerCase() === "m"
-        ){
-
-          musicControl.click();
-
-        }
-
-      }
-    );
-
-  </script>
-
-</body>
+  </main>    <!-- TOAST -->    <div id="toast"></div>    <script src="script.js"></script>  </body>  
 </html>
