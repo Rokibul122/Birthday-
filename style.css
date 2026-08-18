@@ -56,10 +56,6 @@ body::before {
   background-size: 48px 48px;
 }
 
-/* =========================
-   STARS
-========================= */
-
 #stars {
   position: fixed;
   inset: 0;
@@ -69,10 +65,6 @@ body::before {
   pointer-events: none;
 }
 
-/* =========================
-   GLOW
-========================= */
-
 .glow {
   position: fixed;
   width: 450px;
@@ -81,6 +73,7 @@ body::before {
   filter: blur(110px);
   opacity: 0.13;
   pointer-events: none;
+  z-index: 0;
 }
 
 .glow-one {
@@ -95,15 +88,11 @@ body::before {
   top: 40%;
 }
 
-/* =========================
-   LOADER
-========================= */
-
 #loader {
   position: fixed;
   inset: 0;
   background: #070816;
-  z-index: 100;
+  z-index: 100000;
 
   display: flex;
   flex-direction: column;
@@ -125,7 +114,7 @@ body::before {
 
 .loader-moon {
   font-size: 70px;
-  animation: float 2s infinite;
+  animation: float 2s ease-in-out infinite;
 }
 
 #loader h3 {
@@ -158,12 +147,8 @@ body::before {
       var(--pink)
     );
 
-  animation: loading 1.7s forwards;
+  animation: loading 1.7s ease forwards;
 }
-
-/* =========================
-   MAIN
-========================= */
 
 main {
   position: relative;
@@ -179,10 +164,6 @@ main {
     18px
     100px;
 }
-
-/* =========================
-   HERO
-========================= */
 
 .hero {
   min-height: 94vh;
@@ -263,10 +244,7 @@ main {
 .small-title {
   color: #77758b;
   font-size: 11px;
-
-  margin:
-    13px 0
-    5px;
+  margin: 13px 0 5px;
 }
 
 h1,
@@ -282,9 +260,7 @@ h1 {
     clamp(43px, 11vw, 74px);
 
   line-height: 1.02;
-
-  margin:
-    12px 0;
+  margin: 12px 0;
 }
 
 h1 span,
@@ -306,15 +282,14 @@ h2 span {
 .hero-text {
   color: var(--muted);
   font-size: 16px;
+  line-height: 1.7;
+
+  max-width: 540px;
 
   margin:
     12px 0
     27px;
 }
-
-/* =========================
-   BUTTONS
-========================= */
 
 .main-button,
 .gold-button {
@@ -328,6 +303,7 @@ h2 span {
     15px
     24px;
 
+  font-family: inherit;
   font-weight: 700;
   font-size: 14px;
 
@@ -362,7 +338,7 @@ h2 span {
 
 .main-button:active,
 .gold-button:active {
-  transform: translateY(-1px) scale(0.98);
+  transform: scale(0.97);
 }
 
 .main-button b {
@@ -375,17 +351,11 @@ h2 span {
   margin-top: 17px;
 }
 
-/* =========================
-   SECTIONS
-========================= */
-
 .section {
   margin-top: 115px;
 
   opacity: 0;
-
-  transform:
-    translateY(42px);
+  transform: translateY(42px);
 
   visibility: hidden;
 
@@ -397,10 +367,7 @@ h2 span {
 
 .section.visible {
   opacity: 1;
-
-  transform:
-    translateY(0);
-
+  transform: translateY(0);
   visibility: visible;
 }
 
@@ -419,10 +386,6 @@ section h2 {
     0 0
     23px;
 }
-
-/* =========================
-   GLASS CARD
-========================= */
 
 .glass-card {
   position: relative;
@@ -444,6 +407,7 @@ section h2 {
     );
 
   backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
 
   box-shadow:
     0 30px 90px
@@ -488,10 +452,6 @@ section h2 {
     );
 }
 
-/* =========================
-   DUA
-========================= */
-
 .dua-box {
   max-height: 0;
 
@@ -520,7 +480,7 @@ section h2 {
 }
 
 .dua-box.open {
-  max-height: 350px;
+  max-height: 400px;
 
   opacity: 1;
 
@@ -533,13 +493,11 @@ section h2 {
 }
 
 .dua-box strong {
+  display: block;
   color: var(--gold);
   font-size: 14px;
+  margin-top: 15px;
 }
-
-/* =========================
-   FUN CARDS
-========================= */
 
 .cards {
   display: grid;
@@ -581,7 +539,6 @@ section h2 {
 
 .fun-card.large {
   grid-row: span 2;
-
   min-height: 363px;
 
   background:
@@ -618,10 +575,6 @@ section h2 {
   margin: 0;
 }
 
-/* =========================
-   LETTER
-========================= */
-
 .letter {
   position: relative;
   overflow: hidden;
@@ -644,10 +597,15 @@ section h2 {
     );
 
   backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
 
   box-shadow:
     0 30px 90px
     rgba(0, 0, 0, 0.27);
+}
+
+.letter p + p {
+  margin-top: 22px;
 }
 
 .letter-glow {
@@ -721,6 +679,8 @@ section h2 {
 }
 
 .quote span {
+  flex-shrink: 0;
+
   color: #bca5ff;
 
   font-family: Georgia, serif;
@@ -754,10 +714,6 @@ section h2 {
   color: #e4dfeb;
 }
 
-/* =========================
-   SECRET
-========================= */
-
 .secret-card {
   padding: 24px;
 
@@ -773,9 +729,7 @@ section h2 {
 
 .secret-row {
   display: flex;
-
   align-items: center;
-
   gap: 12px;
 }
 
@@ -802,8 +756,9 @@ section h2 {
   color: #d7d3df;
 
   font-size: 14px;
-
   line-height: 1.6;
+
+  margin: 0;
 }
 
 .line {
@@ -815,10 +770,6 @@ section h2 {
   margin:
     18px 0;
 }
-
-/* =========================
-   FINAL
-========================= */
 
 .final {
   text-align: center;
@@ -855,7 +806,6 @@ section h2 {
   color: var(--muted);
 
   font-size: 15px;
-
   line-height: 1.85;
 }
 
@@ -879,10 +829,6 @@ footer {
 
   margin-top: 35px;
 }
-
-/* =========================
-   TOAST
-========================= */
 
 #toast {
   position: fixed;
@@ -914,6 +860,10 @@ footer {
     transform 0.4s ease;
 
   pointer-events: none;
+
+  box-shadow:
+    0 10px 35px
+    rgba(0, 0, 0, 0.3);
 }
 
 #toast.show {
@@ -922,10 +872,6 @@ footer {
   transform:
     translate(-50%, 0);
 }
-
-/* =========================
-   MUSIC CONTROL
-========================= */
 
 #musicControl {
   position: fixed;
@@ -950,6 +896,7 @@ footer {
   color: white;
 
   backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
 
   cursor: pointer;
 
@@ -971,10 +918,6 @@ footer {
   transform: scale(0.94);
 }
 
-/* =========================
-   MUSIC NOTES
-========================= */
-
 .music-note {
   position: fixed;
 
@@ -987,32 +930,6 @@ footer {
   animation:
     musicFloat 3s ease-out forwards;
 }
-
-@keyframes musicFloat {
-  0% {
-    opacity: 0;
-
-    transform:
-      translateY(20px)
-      scale(0.7);
-  }
-
-  20% {
-    opacity: 1;
-  }
-
-  100% {
-    opacity: 0;
-
-    transform:
-      translateY(-100px)
-      scale(1.2);
-  }
-}
-
-/* =========================
-   HEARTS
-========================= */
 
 .celebrate-heart {
   position: fixed;
@@ -1027,49 +944,16 @@ footer {
     heartFloat 3s ease-out forwards;
 }
 
-@keyframes heartFloat {
-  0% {
-    opacity: 0;
-
-    transform:
-      translateY(0)
-      scale(0.5);
-  }
-
-  15% {
-    opacity: 1;
-  }
-
-  100% {
-    opacity: 0;
-
-    transform:
-      translateY(-180px)
-      rotate(25deg)
-      scale(1.3);
-  }
-}
-
-/* =========================
-   PARTICLE
-========================= */
-
 .spark {
   position: fixed;
 
-  z-index: 55;
+  z-index: 9998;
 
   pointer-events: none;
 
   animation:
-    spark 1.5s
-    ease-out
-    forwards;
+    spark 1.5s ease-out forwards;
 }
-
-/* =========================
-   ANIMATIONS
-========================= */
 
 @keyframes loading {
   to {
@@ -1113,9 +997,50 @@ footer {
   }
 }
 
-/* =========================
-   MOBILE
-========================= */
+@keyframes musicFloat {
+  0% {
+    opacity: 0;
+
+    transform:
+      translateY(20px)
+      scale(0.7);
+  }
+
+  20% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+
+    transform:
+      translateY(-100px)
+      scale(1.2);
+  }
+}
+
+@keyframes heartFloat {
+  0% {
+    opacity: 0;
+
+    transform:
+      translateY(0)
+      scale(0.5);
+  }
+
+  15% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+
+    transform:
+      translateY(-180px)
+      rotate(25deg)
+      scale(1.3);
+  }
+}
 
 @media (max-width: 500px) {
 
@@ -1126,6 +1051,10 @@ footer {
 
   .hero {
     min-height: 92vh;
+  }
+
+  .moon {
+    font-size: 72px;
   }
 
   .cards {
@@ -1153,6 +1082,15 @@ footer {
     padding: 17px;
   }
 
+  .quote span {
+    font-size: 38px;
+  }
+
+  .glass-card p,
+  .letter p {
+    font-size: 15px;
+  }
+
   #toast {
     width:
       calc(100% - 35px);
@@ -1164,11 +1102,11 @@ footer {
     right: 14px;
     bottom: 14px;
   }
-}
 
-/* =========================
-   REDUCED MOTION
-========================= */
+  .final h2 {
+    font-size: 38px;
+  }
+}
 
 @media (prefers-reduced-motion: reduce) {
 
@@ -1183,5 +1121,4 @@ footer {
     animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
   }
-
-}
+    }
