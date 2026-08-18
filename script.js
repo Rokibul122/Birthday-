@@ -2,6 +2,64 @@ const $ = (id) => document.getElementById(id);
 
 
 /* =========================
+   MUSIC
+========================= */
+
+const music = $("bgMusic");
+const musicControl = $("musicControl");
+
+async function startMusic(){
+
+  if(!music) return;
+
+  try{
+
+    music.volume = 0.45;
+
+    await music.play();
+
+    if(musicControl){
+      musicControl.textContent = "🔊";
+    }
+
+  }catch(error){
+
+    console.log("Music error:", error);
+
+    if(musicControl){
+      musicControl.textContent = "🎵";
+    }
+
+  }
+
+}
+
+
+/* MUSIC BUTTON */
+
+if(musicControl){
+
+  musicControl.addEventListener("click", async () => {
+
+    if(music.paused){
+
+      await startMusic();
+
+    }else{
+
+      music.pause();
+
+      musicControl.textContent = "🔇";
+
+    }
+
+  });
+
+}
+
+
+
+/* =========================
    LOADING SCREEN
 ========================= */
 
@@ -9,9 +67,13 @@ window.addEventListener("load", () => {
 
   setTimeout(() => {
 
-    $("loader").classList.add("hide");
+    if($("loader")){
 
-  }, 1700);
+      $("loader").classList.add("hide");
+
+    }
+
+  },1700);
 
 });
 
@@ -21,20 +83,34 @@ window.addEventListener("load", () => {
    OPEN SURPRISE
 ========================= */
 
-$("openBtn").addEventListener("click", () => {
+$("openBtn").addEventListener("click", async () => {
+
+  /* Start music after user interaction */
+
+  await startMusic();
+
+
+  /* Reveal first section */
 
   reveal("wish");
 
   burst(25);
 
+
+  /* Scroll */
+
   setTimeout(() => {
 
     $("wish").scrollIntoView({
+
       behavior: "smooth",
+
       block: "start"
+
     });
 
-  }, 150);
+  },150);
+
 
 });
 
@@ -115,7 +191,9 @@ document
 
 $("celebrateBtn").addEventListener(
   "click",
-  () => {
+  async () => {
+
+    await startMusic();
 
     burst(90);
 
@@ -137,7 +215,11 @@ function reveal(id){
   const element =
     document.getElementById(id);
 
-  element.classList.add("visible");
+  if(element){
+
+    element.classList.add("visible");
+
+  }
 
 }
 
