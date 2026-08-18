@@ -1,454 +1,526 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!DOCTYPE html>  <html lang="en">  
+<head>  
+  <meta charset="UTF-8">  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">    <title>For Zainab 🤍</title>  <meta
+name="description"
+content="A little birthday surprise made specially for Zainab."
 
-  <title>For Zainab 🤍</title>
+> 
 
-  <meta
-    name="description"
-    content="A little birthday surprise made specially for Zainab."
-  >
+  <link rel="stylesheet" href="style.css">  
+</head>  <body>    <!-- LOADING SCREEN -->    <div id="loader">  <div class="loader-moon">🌙</div>  
 
-  <meta name="theme-color" content="#070816">
+<h3>Ek chhota sa surprise...</h3>  
 
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<p>  
+  Thoda sabr karo, Zainab 😌  
+</p>  
 
-  <link
-    href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Playfair+Display:wght@600;700&display=swap"
-    rel="stylesheet"
-  >
+<div class="loading">  
+  <span></span>  
+</div>
 
-  <link rel="stylesheet" href="style.css">
-</head>
+  </div>    <!-- BACKGROUND -->  <canvas id="stars"></canvas>
 
-<body>
+  <div class="glow glow-one"></div>  
+  <div class="glow glow-two"></div>    <main>  <!-- HERO -->  
 
-  <div id="loader">
-    <div class="loader-moon">🌙</div>
+<section class="hero">  
 
-    <h3>Ek chhota sa surprise...</h3>
+  <div class="moon-area">  
 
-    <p>Thoda sabr karo, Zainab 😌</p>
+    <div class="moon-ring"></div>  
 
-    <div class="loading">
-      <span></span>
-    </div>
-  </div>
+    <div class="moon">  
+      🌙  
+    </div>  
 
-  <canvas id="stars"></canvas>
+    <span class="orbit-star star-one">✦</span>  
+    <span class="orbit-star star-two">✧</span>  
 
-  <div class="glow glow-one"></div>
-  <div class="glow glow-two"></div>
+  </div>  
 
-  <audio id="bgMusic" loop preload="metadata">
-    <source src="birthday-song.mp3" type="audio/mpeg">
-  </audio>
 
-  <button
-    id="musicControl"
-    type="button"
-    aria-label="Music control"
-    title="Music"
-  >
-    🔇
-  </button>
+  <div class="bismillah">  
+    Bismillahir Rahmanir Rahim  
+  </div>  
 
-  <main>
 
-    <section class="hero">
+  <p class="small-title">  
+    A little surprise made with good wishes  
+  </p>  
 
-      <div class="moon-area">
-        <div class="moon-ring"></div>
 
-        <div class="moon">🌙</div>
+  <h1>  
+    Happy Birthday  
+    <span>Zainab</span>  
+    🤍  
+  </h1>  
 
-        <span class="orbit-star star-one">✦</span>
-        <span class="orbit-star star-two">✧</span>
-      </div>
 
-      <div class="bismillah">
-        Bismillahir Rahmanir Rahim
-      </div>
+  <p class="hero-text">  
+    Aaj ka din thoda sa extra special hai...  
+    kyunki aaj tumhara birthday hai. 😌  
+  </p>  
 
-      <p class="small-title">
-        A little surprise made with good wishes
-      </p>
 
-      <h1>
-        Happy Birthday
-        <span>Zainab</span>
-        🤍
-      </h1>
+  <button id="openBtn" class="main-button">  
 
-      <p class="hero-text">
-        Aaj ka din thoda sa extra special hai...
-        kyunki aaj tumhara birthday hai. 😌
-      </p>
+    <span>  
+      Open Your Surprise  
+    </span>  
 
-      <button
-        id="openBtn"
-        class="main-button"
-        type="button"
-      >
-        <span>Open Your Surprise</span>
-        <b>✦</b>
-      </button>
+    <b>✦</b>  
 
-      <div class="scroll-hint">
-        Scroll karo... kahani abhi baaki hai ↓
-      </div>
+  </button>  
 
-    </section>
 
+  <div class="scroll-hint">  
+    Scroll karo... kahani abhi baaki hai ↓  
+  </div>  
 
-    <section class="section" id="wish">
+</section>  
 
-      <div class="section-number">
-        01 · PEHLI BAAT
-      </div>
 
-      <h2>
-        Ek simple si wish,
-        <span>lekin dil se.</span>
-      </h2>
 
-      <div class="glass-card">
+<!-- SECTION 01 -->  
 
-        <div class="card-light"></div>
+<section class="section" id="wish">  
 
-        <p>
-          Aaj tumhari zindagi ka ek aur khoobsurat
-          saal shuru hua.
+  <div class="section-number">  
+    01 · PEHLI BAAT  
+  </div>  
 
-          Sirf “Happy Birthday” bol kar bhaag jaana
-          thoda unfair hota. 😂
 
-          Isliye socha ek chhoti si digital duniya
-          bana di jaye—
+  <h2>  
+    Ek simple si wish,  
+    <span>lekin dil se.</span>  
+  </h2>  
 
-          thodi si masti,
-          thodi si feelings,
 
-          aur sabse zyada duayein. 🤍
-        </p>
+  <div class="glass-card">  
 
-      </div>
+    <div class="card-light"></div>  
 
-      <button
-        id="duaBtn"
-        class="gold-button"
-        type="button"
-      >
-        Dil se ek dua 🤲
-      </button>
+    <p>  
 
-      <div id="duaBox" class="dua-box">
+      Aaj tumhari zindagi ka ek aur khoobsurat  
+      saal shuru hua.  
 
-        <div class="dua-icon">🤲</div>
+      Sirf “Happy Birthday” bol kar bhaag jaana  
+      thoda unfair hota. 😂  
 
-        <p>
-          Allah tumhari zindagi mein sukoon,
-          barkat aur halal khushiyan ata farmaaye.
+      Isliye socha ek chhoti si digital duniya  
+      bana di jaye—  
 
-          Tumhare ilm mein izafa kare,
-          tumhari mushkilein aasaan kare,
+      thodi si masti,  
+      thodi si feelings,  
 
-          tumhare ghar walon ko khush aur mehfooz rakhe,
+      aur sabse zyada duayein. 🤍  
 
-          aur tumhari har jaiz dua ko tumhare haq mein
-          behtareen waqt par qubool farmaaye.
-        </p>
+    </p>  
 
-        <strong>
-          Ameen Ya Rabbal Aalameen. 🤍
-        </strong>
+  </div>  
 
-      </div>
 
-    </section>
+  <button id="duaBtn" class="gold-button">  
 
+    Dil se ek dua 🤲  
 
-    <section class="section" id="fun">
+  </button>  
 
-      <div class="section-number">
-        02 · BIRTHDAY SCIENCE 😂
-      </div>
 
-      <h2>
-        Aaj ke
-        <span>important rules.</span>
-      </h2>
+  <div id="duaBox" class="dua-box">  
 
-      <div class="cards">
+    <div class="dua-icon">  
+      🤲  
+    </div>  
 
-        <div class="fun-card large">
+    <p>  
 
-          <div class="emoji">🎂</div>
+      Allah tumhari zindagi mein sukoon,  
+      barkat aur halal khushiyan ata farmaaye.  
 
-          <h3>Rule #01</h3>
+      Tumhare ilm mein izafa kare,  
+      tumhari mushkilein aasaan kare,  
 
-          <p>
-            Aaj calories count karna
-            officially suspended hai.
+      tumhare ghar walon ko khush aur mehfooz rakhe,  
 
-            Government notification aa chuki hai. 😂
-          </p>
+      aur tumhari har jaiz dua ko tumhare haq mein  
+      behtareen waqt par qubool farmaaye.  
 
-        </div>
+    </p>  
 
+    <strong>  
+      Ameen Ya Rabbal Aalameen. 🤍  
+    </strong>  
 
-        <div class="fun-card">
+  </div>  
 
-          <div class="emoji">😌</div>
+</section>  
 
-          <h3>Rule #02</h3>
 
-          <p>
-            “Main busy hoon” excuse
-            aaj half-day leave par hai.
-          </p>
 
-        </div>
+<!-- SECTION 02 -->  
 
+<section class="section" id="fun">  
 
-        <div class="fun-card">
+  <div class="section-number">  
+    02 · BIRTHDAY SCIENCE 😂  
+  </div>  
 
-          <div class="emoji">🤲</div>
 
-          <h3>Rule #03</h3>
+  <h2>  
+    Aaj ke  
+    <span>important rules.</span>  
+  </h2>  
 
-          <p>
-            Dua zyada.
-            Tension kam.
-            Baaki Allah par.
-          </p>
 
-        </div>
+  <div class="cards">  
 
 
-        <div class="fun-card wide">
+    <div class="fun-card large">  
 
-          <div class="emoji">✨</div>
+      <div class="emoji">  
+        🎂  
+      </div>  
 
-          <h3>Rule #04</h3>
+      <h3>  
+        Rule #01  
+      </h3>  
 
-          <p>
-            Aaj smile karna compulsory hai.
+      <p>  
 
-            Complaint department kal khulega. 😂
-          </p>
+        Aaj calories count karna  
+        officially suspended hai.  
 
-        </div>
+        Government notification aa chuki hai. 😂  
 
-      </div>
+      </p>  
 
-    </section>
+    </div>  
 
 
-    <section class="section" id="letter">
+    <div class="fun-card">  
 
-      <div class="section-number">
-        03 · EK DIL KI BAAT
-      </div>
+      <div class="emoji">  
+        😌  
+      </div>  
 
-      <div class="letter">
+      <h3>  
+        Rule #02  
+      </h3>  
 
-        <div class="letter-glow"></div>
+      <p>  
+        “Main busy hoon” excuse  
+        aaj half-day leave par hai.  
+      </p>  
 
-        <div class="stamp">
-          FOR<br>
-          YOU
-        </div>
+    </div>  
 
-        <div class="letter-icon">💌</div>
 
-        <h2>Zainab,</h2>
+    <div class="fun-card">  
 
-        <p>
-          Kabhi kabhi kuch log zindagi mein
-          bina kisi announcement ke aa jaate hain,
+      <div class="emoji">  
+        🤲  
+      </div>  
 
-          lekin dheere dheere unki presence
-          important lagne lagti hai.
-        </p>
+      <h3>  
+        Rule #03  
+      </h3>  
 
-        <p>
-          Tum unhi achhe logon mein se ho
-          jinke liye dil se achha sochne ka
-          mann karta hai.
-        </p>
+      <p>  
+        Dua zyada.  
+        Tension kam.  
+        Baaki Allah par.  
+      </p>  
 
-        <div class="quote">
+    </div>  
 
-          <span>“</span>
 
-          <p>
-            Jab dil pareshaan ho,
-            Allah sukoon de.
+    <div class="fun-card wide">  
 
-            Jab raasta mushkil ho,
-            Allah aasaan kare.
+      <div class="emoji">  
+        ✨  
+      </div>  
 
-            Aur jab tum kisi achhi cheez ki dua karo,
+      <h3>  
+        Rule #04  
+      </h3>  
 
-            Allah tumhe usse bhi behtar ata kare.
-          </p>
+      <p>  
+        Aaj smile karna compulsory hai.  
 
-        </div>
+        Complaint department kal khulega. 😂  
+      </p>  
 
-        <p>
-          Allah tumhare imaan,
-          sehat,
-          ilm,
-          waqt aur rizq mein barkat de.
+    </div>  
 
-          Tumhe achhe logon ki sohbat de,
-          buri cheezon se mehfooz rakhe,
 
-          aur tumhare future ko tumhari
-          expectations se bhi zyada khoobsurat bana de.
+  </div>  
 
-          Ameen. 🤲
-        </p>
+</section>  
 
-        <p class="funny">
-          Aur haan...
 
-          itni serious duaon ke baad ek zaroori
-          announcement:
 
-          <b>
-            aaj zyada smile karna mandatory hai.
-          </b>
+<!-- LETTER -->  
 
-          😌😂
-        </p>
+<section class="section" id="letter">  
 
-        <div class="signature">
-          With sincere duas & good wishes,
-          <br>
-          <b>
-            Someone who genuinely wishes you well 🤍
-          </b>
-        </div>
+  <div class="section-number">  
+    03 · EK DIL KI BAAT  
+  </div>  
 
-      </div>
 
-    </section>
+  <div class="letter">  
 
+    <div class="letter-glow"></div>  
 
-    <section class="section" id="secret">
 
-      <div class="section-number">
-        04 · EK CHHOTI REMINDER
-      </div>
+    <div class="stamp">  
+      FOR<br>  
+      YOU  
+    </div>  
 
-      <h2>
-        Life ka ek
-        <span>secret. 🤫</span>
-      </h2>
 
-      <div class="secret-card">
+    <div class="letter-icon">  
+      💌  
+    </div>  
 
-        <div class="secret-row">
 
-          <div class="number">01</div>
+    <h2>  
+      Zainab,  
+    </h2>  
 
-          <p>
-            Har cheez ka answer turant milna zaroori nahi.
-          </p>
 
-        </div>
+    <p>  
 
-        <div class="line"></div>
+      Kabhi kabhi kuch log zindagi mein  
+      bina kisi announcement ke aa jaate hain,  
 
-        <div class="secret-row">
+      lekin dheere dheere unki presence  
+      important lagne lagti hai.  
 
-          <div class="number">02</div>
+    </p>  
 
-          <p>
-            Kabhi kabhi “not yet” bhi Allah ki taraf se
-            protection hoti hai.
-          </p>
 
-        </div>
+    <p>  
 
-        <div class="line"></div>
+      Tum unhi achhe logon mein se ho  
+      jinke liye dil se achha sochne ka  
+      mann karta hai.  
 
-        <div class="secret-row">
+    </p>  
 
-          <div class="number">03</div>
 
-          <p>
-            Jo tumhare haq mein behtar hoga,
-            Allah uska raasta zaroor khol sakta hai.
-          </p>
+    <div class="quote">  
 
-        </div>
+      <span>  
+        “  
+      </span>  
 
-      </div>
+      <p>  
 
-    </section>
+        Jab dil pareshaan ho,  
+        Allah sukoon de.  
 
+        Jab raasta mushkil ho,  
+        Allah aasaan kare.  
 
-    <section class="final section" id="final">
+        Aur jab tum kisi achhi cheez ki dua karo,  
 
-      <div class="final-stars">
-        ✦　✧　✦
-      </div>
+        Allah tumhe usse bhi behtar ata kare.  
 
-      <div class="final-moon">
-        🌙
-      </div>
+      </p>  
 
-      <h2>
-        One Last Dua...
-      </h2>
+    </div>  
 
-      <p>
-        Allah tumhare aaj ko khoobsurat,
 
-        kal ko behtar,
+    <p>  
 
-        aur tumhari poori zindagi ko
+      Allah tumhare imaan,  
+      sehat,  
+      ilm,  
+      waqt aur rizq mein barkat de.  
 
-        sukoon,
-        hidayat,
-        sehat,
-        barkat
+      Tumhe achhe logon ki sohbat de,  
+      buri cheezon se mehfooz rakhe,  
 
-        aur khoobsurat yaadon se bhar de.
-      </p>
+      aur tumhare future ko tumhari  
+      expectations se bhi zyada khoobsurat bana de.  
 
-      <div class="ameen">
-        Ameen. 🤲
-      </div>
+      Ameen. 🤲  
 
-      <button
-        id="celebrateBtn"
-        class="main-button"
-        type="button"
-      >
-        Make A Little Magic
-        <b>✦</b>
-      </button>
+    </p>  
 
-      <footer>
-        Made with duas,
-        good wishes &
-        a tiny bit of drama. 🌙🤍
-      </footer>
 
-    </section>
+    <p class="funny">  
 
-  </main>
+      Aur haan...  
 
-  <div id="toast"></div>
+      itni serious duaon ke baad ek zaroori  
+      announcement:  
 
-  <script src="script.js" defer></script>
+      <b>  
+        aaj zyada smile karna mandatory hai.  
+      </b>  
 
-</body>
+      😌😂  
+
+    </p>  
+
+
+    <div class="signature">  
+
+      With sincere duas & good wishes,  
+
+      <br>  
+
+      <b>  
+        Someone who genuinely wishes you well 🤍  
+      </b>  
+
+    </div>  
+
+  </div>  
+
+</section>  
+
+
+
+<!-- SECTION 04 -->  
+
+<section class="section">  
+
+  <div class="section-number">  
+    04 · EK CHHOTI REMINDER  
+  </div>  
+
+
+  <h2>  
+    Life ka ek  
+    <span>secret. 🤫</span>  
+  </h2>  
+
+
+  <div class="secret-card">  
+
+
+    <div class="secret-row">  
+
+      <div class="number">  
+        01  
+      </div>  
+
+      <p>  
+        Har cheez ka answer turant milna zaroori nahi.  
+      </p>  
+
+    </div>  
+
+
+    <div class="line"></div>  
+
+
+    <div class="secret-row">  
+
+      <div class="number">  
+        02  
+      </div>  
+
+      <p>  
+        Kabhi kabhi “not yet” bhi Allah ki taraf se  
+        protection hoti hai.  
+      </p>  
+
+    </div>  
+
+
+    <div class="line"></div>  
+
+
+    <div class="secret-row">  
+
+      <div class="number">  
+        03  
+      </div>  
+
+      <p>  
+        Jo tumhare haq mein behtar hoga,  
+        Allah uska raasta zaroor khol sakta hai.  
+      </p>  
+
+    </div>  
+
+
+  </div>  
+
+</section>  
+
+
+
+<!-- FINAL -->  
+
+<section class="final section">  
+
+  <div class="final-stars">  
+    ✦　✧　✦  
+  </div>  
+
+
+  <div class="final-moon">  
+    🌙  
+  </div>  
+
+
+  <h2>  
+    One Last Dua...  
+  </h2>  
+
+
+  <p>  
+
+    Allah tumhare aaj ko khoobsurat,  
+
+    kal ko behtar,  
+
+    aur tumhari poori zindagi ko  
+
+    sukoon,  
+    hidayat,  
+    sehat,  
+    barkat  
+
+    aur khoobsurat yaadon se bhar de.  
+
+  </p>  
+
+
+  <div class="ameen">  
+    Ameen. 🤲  
+  </div>  
+
+
+  <button id="celebrateBtn" class="main-button">  
+
+    Make A Little Magic  
+
+    <b>  
+      ✦  
+    </b>  
+
+  </button>  
+
+
+  <footer>  
+
+    Made with duas,  
+    good wishes &  
+    a tiny bit of drama. 🌙🤍  
+
+  </footer>  
+
+</section>
+
+  </main>    <!-- TOAST -->    <div id="toast"></div>    <script src="script.js"></script>  </body>  
 </html>
